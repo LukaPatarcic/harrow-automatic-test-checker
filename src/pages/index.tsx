@@ -43,10 +43,10 @@ const Home: NextPage = () => {
 
     alert(`correct: ${results.correct} incorrect:${results.incorrect} total: ${totalCorrectQuestions}`);
   }
-  return <div>
+  return <div className="flex justify-center items-center">
     <form onSubmit={onSubmit}>
-      ${questions.map((question) => <Question key={question.id} question={question} />)}
-      <button type="submit">Submit</button>
+      {questions.map((question) => <Question key={question.id} question={question} />)}
+      <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full">Submit</button>
     </form>
   </div>
 };
